@@ -16,6 +16,27 @@ body {
     color: white;
 }
 
+svg path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 0.2;
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+    animation: textAnim 4s ease-in-out 1 forwards;
+}
+@keyframes textAnim {
+    0% {
+        stroke-dashoffset: 90;
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+}
+
 .cursor {
     z-index: 999;
     position: fixed;
@@ -70,7 +91,7 @@ nav ul a {
 nav ul a:hover {
     opacity: 1;
 }
-.logo {
+/* .logo {
     font-size: 2em;
     font-weight: 800;
     color: white;
@@ -79,7 +100,7 @@ nav ul a:hover {
     background: url(assets/ps_bg.png) 0 0 / cover no-repeat;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-}
+} */
 
 
 .logo:hover {
