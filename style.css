@@ -2,15 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
+    font-family: 'Matangi';
 }
 :root{
     --background: rgb(24, 24, 24);
     --second-background: rgb(21, 21, 21);
 }
+
 body {
     background-color: var(--background);
     color: white;
@@ -117,16 +118,6 @@ nav ul a {
 nav ul a:hover {
     opacity: 1;
 }
-/* .logo {
-    font-size: 2em;
-    font-weight: 800;
-    color: white;
-    opacity: 0.8;
-    transition: 0.2s ease-in-out;
-    background: url(assets/ps_bg.png) 0 0 / cover no-repeat;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-} */
 
 
 .logo:hover {
@@ -335,8 +326,7 @@ section {
 }
 
 #projects {
-    /* background-color: var(--background); */
-    background: linear-gradient(90deg, rgba(2, 0, .6, 1) 10%, rgba(255, 255, 255, 0.7) 50%)
+    background: linear-gradient(90deg, rgba(2, 0, .6, 1) 10%, rgba(116, 116, 116, 0.7) 50%)
 }
 .object div{
     position: absolute;
@@ -424,6 +414,7 @@ section {
 }
 .box {
     border: 3px solid rgb(49, 49, 49);
+    background: #292929;
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
@@ -437,7 +428,7 @@ section {
     transition: 0.3s ease-in-out;
 }
 .box:hover {
-    border: 3px solid rgb(100, 100, 100);
+    border: 3px solid rgb(185, 185, 185);
 }
 .box p {
     opacity: 0.8;
