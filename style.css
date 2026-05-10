@@ -16,6 +16,10 @@ body {
     color: white;
 }
 
+a {
+    cursor: none;
+}
+
 svg path {
     fill: transparent;
     stroke: #fff;
@@ -38,11 +42,11 @@ svg path {
 }
 
 .cursor {
-    z-index: 999;
+    z-index: 1001;
     position: fixed;
     background: #EDEDED;
-    width: 80px;
-    height: 80px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     pointer-events: none;
     box-shadow: 0 0 80px #EDEDED,
@@ -50,9 +54,11 @@ svg path {
                 0 0 150px #EDEDED;
     animation: colors 5s infinite;
     transform: translate(-50%, -50%);
-    opacity: 0.4;
+    opacity: 0.8;
     display: none;
+
 }
+
 
 .cursor::before{
     content: '';
@@ -63,6 +69,24 @@ svg path {
     opacity: 0;
     transform: translate(-30%, -30%);
     border-radius: 50%;
+}
+
+@keyframes cursorAnim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3)
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim .5s forwards;
+    background: grey;
 }
 
 
@@ -83,11 +107,13 @@ ul {
     align-items: center;
     gap: 3em;
 }
+
 nav ul a {
     color: white;
     opacity: 0.7;
     transition: 0.2s ease-in-out;
 }
+
 nav ul a:hover {
     opacity: 1;
 }
@@ -114,7 +140,7 @@ nav ul a:hover {
     border-radius: 0.5em;
     font-size: 1.1em;
     border: 2px solid white;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 0.2s ease-in-out;
 }
 .btn:hover {
@@ -407,7 +433,7 @@ section {
     padding: 3em;
     gap: 2em;
     color: white;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 0.3s ease-in-out;
 }
 .box:hover {
@@ -433,12 +459,14 @@ form{
     align-items: center;
     justify-content: center;
     gap: 2em;
+    /* cursor: none; */
 }
 form .input-box {
     display: flex;
     flex-direction: column;
     align-items: baseline;
     gap: 1em;
+    /* cursor: none; */
 }
 .info-box span {
     font-size: 1.5em;
@@ -449,6 +477,7 @@ form input {
     border-radius: 0.5em;
     border: none;
     outline: none;
+    cursor: none;
 }
 form input:focus {
     background: rgb(229, 229, 229);
@@ -500,7 +529,7 @@ footer {
 .col-right .social-icons i{
     font-size: 2em;
     transition: 0.2s ease-in-out;
-    cursor: pointer;
+    cursor: none;
 }
 .social-icons i:hover {
     color: white

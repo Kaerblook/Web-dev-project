@@ -3,6 +3,8 @@ const nav = document.querySelector(".links");
 const cursor = document.querySelector(".cursor");
 var timeout;
 
+document.body.style.cursor = "none";
+
 document.addEventListener("mousemove", (e) => {
     let x = e.clientX;
     let y = e.clientY;
@@ -22,6 +24,13 @@ document.addEventListener("mouseout", () => {
     cursor.style.display = "none";
 });
 
+document.addEventListener("click", () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
+});
 menu.onclick = () => {
     // menu.classList.toggle('bx-x');
     nav.classList.toggle('active');
